@@ -27,6 +27,8 @@ python main.py
 
 默认输出目录为 `T113Capture.exe` 同级的 `captures`，首次抓包时自动创建，尽量不占用 C 盘。设置文件 `T113Capture.settings.json` 也保存在 EXE 同级；如果程序目录不可写，才回退到用户本地目录。界面中可随时修改输出目录。
 
+重新打包时，构建脚本会先在 `build\release` 生成新程序，再替换 `dist\T113Capture` 中的程序文件；同级的 `captures` 抓包目录和设置文件会保留，不参与清理。
+
 ## 使用流程
 
 1. 用 USB/ADB 连接 T113，确认 `adb devices` 中设备状态为 `device`。
